@@ -31,7 +31,7 @@ body {
 }
 
 #firstTry {
-    position: absolute;
+    position: relative;
     background-color: white;
     width: 35%;
     height: 10%;
@@ -50,8 +50,8 @@ body {
     top: 0;
     right: 0;
     background: white;
-    height: 12.5%;
-    width:12.5%;
+    height: 15%;
+    width:15%;
     border-radius: 500px;
     top: 2.5%;
     right: 2.5%;
