@@ -39,16 +39,21 @@ body {
     height: 10%;
     border-radius: 500px;
     margin: 2%;
+    margin-bottom: 3%;
     display: inline-flex;    
     align-items: center;
-    font-size: 1vw;
+    font-size: 0.95vw;
     justify-content: center;
 }
 
-
-
 #company{
-    font-size: small;
+    margin: 2%; 
+    font-size: 1.5vw;
+}
+
+#job_title{
+    margin: 2%;
+    font-size: 2vw;
 }
 
 
