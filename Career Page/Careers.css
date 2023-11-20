@@ -1,3 +1,6 @@
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+
 body {
     margin: 0;
     display: flex;
@@ -27,23 +30,26 @@ body {
     height:75%;
     padding-bottom:2vh;
     position: relative;
-
+    font-family: 'Josefin Sans', sans-serif;
 }
 
-#firstTry {
-    position: absolute;
+.capsule {
     background-color: white;
     width: 35%;
     height: 10%;
     border-radius: 500px;
-    display: inline-flex;
-    left: 5%;
-    top: 5%;
+    margin: 2%;
+    display: inline-flex;    
     align-items: center;
     font-size: 1vw;
-    overflow-wrap: break-word;
     justify-content: center;
-} 
+}
+
+
+
+#company{
+    font-size: small;
+}
 
 
 

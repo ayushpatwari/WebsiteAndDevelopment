@@ -2,41 +2,22 @@
 
 <html>
     <head>
-        <script>
-            var bookmarked = false;
-
-            function bookmark() {
-                bookmark = !bookmark; //true
-                var element = document.getElementsByClassName("fa-solid-fa-bookmark")
-                if (bookmarked)
-                {
-                    element.src = "imag2.jpg" //non-bookmarked state
-                }
-                else{
-                    element.src = "image.png" //sets to bookmarked state
-                }
-            }
-
-
-            function myFunction(x) {
-                x.classList.toggle("fa-regular fa-bookmark");
-            }
-
-
-        </script>
         <link href="Careers.css" rel="stylesheet" type="text/css"/>
     </head>
     <script src="https://kit.fontawesome.com/258ae76979.js" crossorigin="anonymous"></script>
     <body>
-        <i onclick="myFunction(this)" class="fa-solid fa-bookmark"></i>
-
         <div class = "single_job">
 
             <div class = "inner">
-                <div class = "capsule" id = "firstTry">
-                    <p id = "month">May 12, 2023</p>
+
+                <div class = "capsule">
+                    <p id = "month">20 May, 2023</p>
                 </div>
-            </div>
+
+                <p id = "company">Amazon</p>
+                <p id = "job_title">Senior UI/UX Design</p>
+            </div> 
+            
         </div>
     </body>
 </html>
