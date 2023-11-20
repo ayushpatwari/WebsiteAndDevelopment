@@ -61,12 +61,6 @@ hr {
     height:2px;
 }
 
-#login {
-    padding: 9px, 25px;
-    background-color: rgba(0, 136, 169, 1);
-    boi
-}
-
 /* Main content */
 
 .main__content {
@@ -74,10 +68,10 @@ hr {
     padding-top: 40px;
 }
 
-#OneLiner {
-    display:flex;
+#ToApply {
     justify-content: center;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    font-size: 7vh;
-    color: black;
+    display:flex;
+    font-family: 'Noto Sans', sans-serif;
+
 }
+
