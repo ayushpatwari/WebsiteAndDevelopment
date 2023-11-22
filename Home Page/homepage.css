@@ -72,4 +72,10 @@ hr {
     padding: 12px;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 200%;
+    background-image: linear-gradient(darkblue, turquoise);
+    color: white;
+}
+
+#what_are_we{
+    padding: 3%;
 }

@@ -6,22 +6,55 @@
     </head>
     <script src="https://kit.fontawesome.com/258ae76979.js" crossorigin="anonymous"></script>
         <body>
-        <div class = "single_job">
+            <header>
+            <h1 class="logo">Virtual Systems</h1>
+               <nav>
+                   <ul class = "nav__links"> 
+                       <li><a href="/Home Page/homepage.html">Home</a></li>
+                       <li><a href="/Forms Page/Forms.html">Login</a></li>
+                      <li><a href="/Career Page/Careers.html">Careers</a></li>
+               </ul>
+           </nav>
+        </header>
+        <div class = "singleJob">
 
             <div class = "inner">
-
                 <div class = "capsule">
                     <p id = "month">20 May, 2023</p>
                 </div>
 
                 <div class = "bookmark">
-                    <i class="fa-solid fa-bookmark" style="color: #006da3;"></i>
+                    <i id="toggleBookmark" class="fa-regular fa-bookmark" style="color: #006da3;"></i>
                 </div>
-
+        
                 <p id = "company">Amazon</p>
                 <p id = "job_title">Senior UI/UX Design</p>
+                <span class = "tags">
+                    <p id = "tagName">Part Time</p>
+                </span>
+                <span class = "tags">
+                    <p id = "tagName">Senior Level</p>
+                </span>
+                <span class = "tags">
+                    <p id = "tagName">Distant</p>
+                </span>
+                <span class = "tags">
+                    <p id = "tagName">Project Work</p>
+                </span>
+                <div class ="outer">
+                    <p id = "salary">$250/hour</p>
+                </div>
             </div> 
             
         </div>
+
+        <script>
+            const x = document.getElementById("toggleBookmark");
+
+            x.addEventListener("click", function() {
+                x.classList.toggle("fa-regular");
+                x.classList.toggle("fa-solid");
+            });
+        </script>
     </body>
 </html>
