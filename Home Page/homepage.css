@@ -72,9 +72,13 @@ hr {
     padding: 12px;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 200%;
-    background-image: linear-gradient(darkblue, turquoise);
-    color: white;
+    background: scroll;
+    background-color: gray;
+    background-image: url(5\ types\ of\ power.png);
+    background-repeat:round;
+    backgroundrep
 }
+
 
 #what_are_we{
     padding: 3%;

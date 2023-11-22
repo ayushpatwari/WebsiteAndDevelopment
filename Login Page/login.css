@@ -31,6 +31,7 @@ body {
 .container h2 {
     display:flex;
     justify-content: center;
+    font-weight: 400px;
 }
 
 
@@ -39,5 +40,23 @@ form {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 5%;
+    padding: 12px;
+}
+
+.actualForm {
+    padding: 12px;
+}
+
+input[type="submit"] {
+    color:white;
+    background-color: purple;
+    padding: 10px 45px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    
+}
+
+input[type="submit"]:hover {
+    background-color: pink;
+    transition: 0.5s ease-in-out;
 }

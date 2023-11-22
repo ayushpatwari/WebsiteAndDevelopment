@@ -23,12 +23,11 @@ body {
 }
 
 .inner {    
-    background-color: rgb(255, 218, 193);
+    background-color: rgb(233, 193, 156);
     flex-direction: column;
     justify-content: flex-start;
     border-radius: 4%;
     height:75%;
-    margin-bottom: 2%;
     padding-bottom:2vh;
     position: relative;
     font-family: 'Josefin Sans', sans-serif;
@@ -40,7 +39,7 @@ body {
     width: 7vw;
     height: 1.9vw;
     border-radius: 500px;
-    margin: 4%;
+    margin: 2%;
     margin-bottom: 3%;
     display: inline-flex;    
     align-items: center;
@@ -49,12 +48,12 @@ body {
 }
 
 #company{
-    margin: 4%; 
+    margin: 2%; 
     font-size: 1.5vw;
 }
 
 #job_title{
-    margin: 4%;
+    margin: 2%;
     font-size: 2vw;
 }
 
@@ -65,9 +64,9 @@ body {
     height: 1.9vw;
     border-radius: 50%;
     position: absolute;
-    display: inline-flex;
-    margin: 4%;   
-    left:80%; 
+    display: inline-flex;   
+    top: 2%;
+    left:88%; 
     align-items: center;
     font-size: 0.85vw;
     justify-content: center;
@@ -87,13 +86,12 @@ body {
     justify-content: center;
 }
 
-.outer{
-    margin:4%;
-
+#salary{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.9vw;
 }
 
-
-#salary{
-    font-size: 1vw;
-
+#location{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.9vw;
 }
