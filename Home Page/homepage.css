@@ -66,20 +66,25 @@ hr {
     background-color: #e0e0c8;
 }
 
-#text_plus_image{
+#what_are_we{
     display: flex;
-    justify-content: left;
-    padding: 12px;
+    flex-direction: row;
+    padding: 10%;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 200%;
-    background: scroll;
-    background-color: gray;
-    background-image: url(5\ types\ of\ power.png);
-    background-repeat:round;
-    backgroundrep
+    background-image: linear-gradient(rgb(0, 139, 134), lightblue), url(peoplecodingtogether.jpeg);
+    color: white;
 }
 
-
-#what_are_we{
-    padding: 3%;
+.information{
+    margin: 1.75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+    padding: 1%;
+    align-content: space-around;
+    border: solid;
+    border-radius: 4%;
+    border-width: 7px;
 }

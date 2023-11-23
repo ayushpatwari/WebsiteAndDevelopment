@@ -60,3 +60,10 @@ input[type="submit"]:hover {
     background-color: pink;
     transition: 0.5s ease-in-out;
 }
+
+.graphics {
+    display: flex;
+    height:100%;
+    width:20%;
+    background-color: blue;
+}

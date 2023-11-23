@@ -11,8 +11,8 @@ body {
 }
 
 .singleJob {
-    width: 18.25vw;    
-    height: 18.25vw;
+    width: 18.5vw;    
+    height: auto;
     flex-direction: column;
     justify-content: space-between;
     border: 0.12vw solid rgb(215, 215, 215);
@@ -27,7 +27,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     border-radius: 4%;
-    height:75%;
+    height:auto;
     padding-bottom:2vh;
     position: relative;
     font-family: 'Josefin Sans', sans-serif;
@@ -91,7 +91,22 @@ body {
     font-size: 0.9vw;
 }
 
-#location{
+#location{    
     font-family: 'Josefin Sans', sans-serif;
     font-size: 0.9vw;
+}
+
+
+.details{
+    background-color: black;
+    width: 7vw;
+    height: 1.9vw;
+    border-radius: 500px;
+    margin: 2%;
+    display: inline-flex;    
+    align-items: center;
+    font-size: 1vw;
+    color: white;
+    justify-content: center;
+    font-family: 'Josefin Sans', sans-serif;
 }
