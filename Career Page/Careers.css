@@ -95,6 +95,9 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 0.9vw;
 }
+.blah {
+    width:50%;
+}
 
 
 .details{
@@ -103,10 +106,16 @@ body {
     height: 1.9vw;
     border-radius: 500px;
     margin: 2%;
-    display: inline-flex;    
+    display: flex;    
     align-items: center;
     font-size: 1vw;
     color: white;
     justify-content: center;
     font-family: 'Josefin Sans', sans-serif;
+    margin-left: 60%;
+    margin-top:50;
+    margin-top:50;
+
 }
+
+
