@@ -8,6 +8,7 @@ body {
     justify-content: center;
     height: 100vh;
     background-color: white ;
+    
 }
 
 .singleJob {
@@ -113,9 +114,7 @@ body {
     justify-content: center;
     font-family: 'Josefin Sans', sans-serif;
     margin-left: 60%;
-    margin-top:50;
-    margin-top:50;
-
+    align-self: flex-start;
 }
 
 
