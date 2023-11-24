@@ -1,16 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
-/*Overarching Styles */
 body {
-    margin: 0;
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:0;
+}
+
+/*navigation bar and header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1vw 10%;
+    background-color: #24252A;
+}
+
+.nav__links {
+    text-decoration: none;
+    color: white;
+    list-style: none;
+}
+
+.logo {
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+    cursor: pointer;
+    font-size: 2vw;
+
+}
+
+/* Header li and a tag styles */
+li, a {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 500;
+    font-size:1.5vw;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    transition: all 0.3s ease-in;
+    color: gray;
+}
+
+.nav__links li {
+    display:inline-block;
+    padding: 0, 20%;
+    margin-left: 0.5vw;
+}
+
+/*Overarching Styles */
+/*Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.container {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    background-color: white ;
-    
+    margin:2%;
+    height: 50vh;
+    background-color: white;
+     
 }
 
+/*Below is code for a SINGLE element. Anything ABOVE does NOT deal with a single career */
 .singleJob {
     width: 18.5vw;    
     height: auto;
@@ -80,6 +137,12 @@ body {
 }
 
 /*Details Capsule */
+.info{
+    display: inline-block;
+    position: relative;
+    bottom: 0.9vw;
+}
+
 .details{
     background-color: black;
     width: 7vw;
@@ -123,13 +186,8 @@ body {
 }
 
 /*Location (San Francisco, CA)*/
-#location{    
-    font-family: 'Josefin Sans', sans-serif;
+#location {
     font-size: 0.9vw;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
-.info{
-    display: inline-block;
-    position: relative;
-    bottom: 0.9vw;
-}
