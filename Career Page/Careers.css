@@ -75,6 +75,11 @@ body {
     justify-content: center;
 }
 
+#tagName {
+    font-weight: 400px;
+}
+
+/*Details Capsule */
 .details{
     background-color: black;
     width: 7vw;
@@ -88,46 +93,43 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-.info{
-    display: inline-block;
-    position: relative;
-    bottom: 0.9vw;
-}
-
 .details:hover {
     background: gray;
     transition: 0.5s ease-out;
 }
 
+/*Company (Amazon) */
 #company{
     margin: 2%; 
     font-size: 1.5vw;
 }
 
+/*Job title (i.e. UI/UX Design) */
 #job_title{
     margin: 2%;
     font-size: 2vw;
 }
 
-#tagName {
-    font-weight: 400px;
-}
-
-#salary{
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.9vw;
-}
-
-#location{    
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.9vw;
-}
-
+/*Div class for the next two styles */
 .importance {
     width:50%;
     display: inline-block;
 }
 
+/*Salary ($250/hour)*/
+#salary{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.9vw;
+}
 
+/*Location (San Francisco, CA)*/
+#location{    
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.9vw;
+}
 
-
+.info{
+    display: inline-block;
+    position: relative;
+    bottom: 0.9vw;
+}
