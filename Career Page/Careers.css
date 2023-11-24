@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
-
+/*Overarching Styles */
 body {
     margin: 0;
     display: flex;
@@ -35,6 +35,7 @@ body {
     position: relative;
 }
 
+/*Elemental Styles */
 .capsule {
     background-color: white;
     width: 7vw;
@@ -47,17 +48,6 @@ body {
     font-size: 1vw;
     justify-content: center;
 }
-
-#company{
-    margin: 2%; 
-    font-size: 1.5vw;
-}
-
-#job_title{
-    margin: 2%;
-    font-size: 2vw;
-}
-
 
 .bookmark{ 
     background-color: white;
@@ -73,10 +63,8 @@ body {
     justify-content: center;
 }
 
-
-
 .tags{
-    border: 0.15vw solid rgba(107, 107, 107, 0.639); /* Optional: Add a border to visualize the box */   
+    border: 0.15vw solid rgba(0, 0, 0, 0.639); /* Optional: Add a border to visualize the box */   
     height: 1vw;
     border-radius: 500px;
     margin: 1%;
@@ -85,6 +73,44 @@ body {
     font-size: 0.7vw;
     padding:2%;
     justify-content: center;
+}
+
+.details{
+    background-color: black;
+    width: 7vw;
+    height: 1.9vw;
+    border-radius: 500px;
+    display: flex;    
+    align-items: center;
+    font-size: 1vw;
+    color: white;
+    justify-content: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.info{
+    display: inline-block;
+    position: relative;
+    bottom: 0.9vw;
+}
+
+.details:hover {
+    background: gray;
+    transition: 0.5s ease-out;
+}
+
+#company{
+    margin: 2%; 
+    font-size: 1.5vw;
+}
+
+#job_title{
+    margin: 2%;
+    font-size: 2vw;
+}
+
+#tagName {
+    font-weight: 400px;
 }
 
 #salary{
@@ -96,25 +122,12 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 0.9vw;
 }
-.blah {
+
+.importance {
     width:50%;
+    display: inline-block;
 }
 
 
-.details{
-    background-color: black;
-    width: 7vw;
-    height: 1.9vw;
-    border-radius: 500px;
-    margin: 2%;
-    display: flex;    
-    align-items: center;
-    font-size: 1vw;
-    color: white;
-    justify-content: center;
-    font-family: 'Josefin Sans', sans-serif;
-    margin-left: 60%;
-    align-self: flex-start;
-}
 
 
