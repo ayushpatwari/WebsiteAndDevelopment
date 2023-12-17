@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+body {
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:0;
+}
+
+/*navigation bar and header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1vw 10%;
+    background-color: #24252A;
+}
+
+.nav__links {
+    text-decoration: none;
+    color: white;
+    list-style: none;
+}
+
+.logo {
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+    cursor: pointer;
+    font-size: 2vw;
+
+}
+
+/* Header li and a tag styles */
+li, a {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 500;
+    font-size:1.5vw;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    transition: all 0.3s ease-in;
+    color: gray;
+}
+
+.nav__links li {
+    display:inline-block;
+    padding: 0, 20%;
+    margin-left: 0.5vw;
+}
+
+/*Overarching Styles */
+/*Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:2%;
+    height: 50vh;
+    background-color: white;
+     
+}
+
+/*Below is code for a SINGLE element. Anything ABOVE does NOT deal with a single career */
+.singleJob {
+    width: 18.5vw;    
+    height: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 0.12vw solid rgb(215, 215, 215);
+    box-shadow: 45px;
+    background-color: rgba(255, 255, 255, 0.725);
+    border-radius: 4%;
+    padding: 0.1%;
+}
+
+.inner {    
+    background-color: rgb(156, 221, 254);
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 4%;
+    height:auto;
+    padding-bottom:2vh;
+    position: relative;
+    font-family: 'Josefin Sans', sans-serif;
+    position: relative;
+    margin:2%;
+    padding:3%;
+}
+
+/*Elemental Styles */
+.capsule {
+    background-color: white;
+    width: 7vw;
+    height: 1.9vw;
+    border-radius: 500px;
+    margin: 2%;
+    margin-bottom: 3%;
+    display: inline-flex;    
+    align-items: center;
+    font-size: 0.9vw;
+    justify-content: center;
+}
+
+.bookmark{ 
+    background-color: white;
+    width: 1.9vw;
+    height: 1.9vw;
+    border-radius: 50%;
+    position: absolute;
+    display: inline-flex;   
+    top: 5.9%;
+    left:83%;
+    align-items: center;
+    font-size: 0.85vw;
+    justify-content: center;
+}
+
+.tags{
+    border: 0.12vw solid rgba(0, 0, 0, 0.339); /* Optional: Add a border to visualize the box */   
+    height: 0.68vw;
+    border-radius: 500px;
+    margin: 1%;
+    display: inline-flex;    
+    align-items: center;
+    font-size: 0.7vw;
+    padding:2.8%;
+    justify-content: center;
+}
+
+#tagName {
+    font-weight: 400px;
+}
+
+/*Details Capsule */
+.info{
+    display: inline-block;
+    position: relative;
+    bottom: 0.9vw;
+}
+
+.details{
+    background-color: black;
+    width: 5vw;
+    height: 1.9vw;
+    border-radius: 500px;
+    display: flex;    
+    align-items: center;
+    font-size: 1vw;
+    color: white;
+    justify-content: center;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-left:55%;
+}
+
+.details:hover {
+    background: gray;
+    transition: 0.5s ease-out;
+}
+
+/*Company (Amazon) */
+#company{
+    margin: 2%; 
+    font-size: 1.5vw;
+}
+
+/*Job title (i.e. UI/UX Design) */
+#job_title{
+    margin: 2%;
+    font-size: 2vw;
+}
+
+/*Div class for the next two styles */
+.importance {
+    width:50%;
+    display: inline-block;
+}
+
+/*Salary ($250/hour)*/
+#salary{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.1vw;
+    margin-left: 13%;
+}
+
+/*Location (San Francisco, CA)*/
+#location {
+    font-size: 0.9vw;
+    font-family: 'Josefin Sans', sans-serif;
+    color: rgba(0, 0, 0, 0.575);
+    margin-left: 13%;
+    margin-top:-8%;
+}
+
+  #filtersOpen{
+    font-size: 2.5vw;
+    font-family: 'Josefin Sans', sans-serif;
+    margin:5%;
+    display: inline-flex;
+  }
+
+  #filtersCaret{
+    padding-top: 35.3%;
+    padding-left: 30%;
+  }
+
+  .sidenav {
+    height: 50%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 25%; /* Stay at the top */
+    left: 0;
+    background-color: #ffffff; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+
+  
