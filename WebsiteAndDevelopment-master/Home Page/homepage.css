@@ -68,15 +68,19 @@ hr {
 
 .what_are_we{
     display: flex;
-    justify-content: center;
-    padding-left: 35%;
-    padding-right: 35%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-basis: 25%;
+    margin: auto;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-top: 15%;
     padding-bottom: 15%;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 200%;
     background-image: linear-gradient(rgb(0, 139, 134), lightblue), url(peoplecodingtogether.jpeg);
     color: white;
+    z-index: 2;
 }
 
 .information{
@@ -89,4 +93,12 @@ hr {
     border: solid;
     border-radius: 4%;
     border-width: 5px;
+}
+
+.image_fit{
+    display:flex;
+    width: 40%;
+    height: 40%;
+    z-index: 1;
+
 }
