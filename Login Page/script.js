@@ -11,9 +11,13 @@ const signUpOnlyElements = document.querySelectorAll("#SignUpOnly");
 //sign in h3
 const signIn = document.querySelector("#signIn");
 //signUpButton
-const signUpButton = document.querySelector(".LOGIN");
+const button = document.querySelector(".LOGIN");
 //Gainig access to the create class and its elements
 const arrow = document.querySelector("#Arrow");
+
+//getting access to all form elements
+const username = document.querySelector("#username");
+const password = document.querySelector("#password");
 
 let signInMode = true;
 
@@ -32,7 +36,7 @@ createAccount.addEventListener("click", () => {
                 signUpOnlyElements[i].classList.remove("hidden");
             }
             signIn.classList.add("hidden");
-            signUpButton.innerHTML = "Sign Up";
+            button.innerHTML = "Sign Up";
             createAccount.innerHTML = "Sign In";
             arrow.classList.remove("ri-arrow-right-fill");
             arrow.classList.add("ri-arrow-left-fill");
@@ -59,7 +63,7 @@ createAccount.addEventListener("click", () => {
                 signUpOnlyElements[i].classList.add("hidden");
             }
             signIn.classList.remove("hidden");
-            signUpButton.innerHTML = "Log In";
+            button.innerHTML = "Log In";
             createAccount.innerHTML = "Create Account";
             arrow.classList.remove("ri-arrow-left-fill");
             arrow.classList.add("ri-arrow-right-fill");
@@ -68,3 +72,15 @@ createAccount.addEventListener("click", () => {
     }
 });
 
+button.addEventListener("click", () => {
+    let userVal = username.value;
+    let passVal = password.value;
+    
+    const toSend = {
+        "username": userVal,
+        "password": passVal
+    };
+
+    console.log(toSend);
+    
+});
