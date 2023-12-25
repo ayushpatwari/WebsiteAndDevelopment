@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
 body {
-    
+  font-family: 'Josefin Sans', sans-serif;
+
     padding:0;
     margin:0;
 }
@@ -58,8 +59,110 @@ a:hover {
 }
 
 .banner{
-  background-color: rgb(156, 221, 254);
+  background-color: rgb(16, 16, 16);
   padding: 4%;
+}
+
+
+.search{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 60px;
+  transition: 0.5s;
+  box-shadow: 0 0 0 5px #000000;
+  overflow: hidden;
+}
+
+.search.active{
+  width:360px;
+}
+
+.search .icon{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index:10000;
+  cursor: pointer;
+}
+
+.search .icon::before{
+  content:'';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 3px solid;
+  border-radius: 50%;
+  transform: translate(-4px,-4px);
+}
+
+
+.search .icon::after{
+  content:'';
+  position: absolute;
+  width: 3px;
+  height: 12px;
+  background: #000000;
+  transform: translate(6px,6px) rotate(315deg);
+  
+}
+
+.search .input{
+  position: relative;
+  width: 300px;
+  height:60px;
+  left:60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search .input input{
+  position: absolute;
+  width:100%;
+  height:100%;
+  border: none;
+  outline: none;
+  padding:11px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.9vw;
+}
+
+.clear{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  width:15px;
+  height:15px;
+  right:15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clear::before{
+  position: absolute;
+  content: '';
+  width:1px;
+  height:15px;
+  background:#999;
+  transform: rotate(45deg);
+}
+
+.clear::after{
+  position: absolute;
+  content: '';
+  width:1px;
+  height:15px;
+  background:#999;
+  transform: rotate(315deg);
 }
 
 /*SALARY SLIDER*/
@@ -71,10 +174,11 @@ a:hover {
   border-radius: 5px;
   border: 1px solid #999;
   background: none;
-  font-family: 'Josefin Sans', sans-serif;
   font-size: 0.9vw;
   width:3%;
   border: none;
+  color:white;
+  margin-bottom: 2%;
 }
 
 #salaryTitle{
@@ -84,6 +188,7 @@ a:hover {
 
 .price-input p{
   width:0.001px;
+  margin-right:2px;
 }
 
 .seperator{
@@ -98,7 +203,7 @@ input[type="number"]::-webkit-inner-spin-button{
 .slider{
   height: 5px;
   border-radius: 5px;
-  background: #ddd;
+  background: #838383;
   position: relative;
   width:17%;
 }
@@ -127,12 +232,13 @@ input[type="number"]::-webkit-inner-spin-button{
   -webkit-appearance: none;
 }
 input[type="range"]::-webkit-slider-thumb{
-  height: 17px;
-  width:17px;
+  height: 1vw;
+  width:1vw;
   border-radius: 50%;
   pointer-events: auto;
   -webkit-appearance: none;
   background: rgb(158, 255, 255);
+  margin-top: -0.4vh;
 }
 .container {
     display: flex;
@@ -161,7 +267,6 @@ input[type="range"]::-webkit-slider-thumb{
     height:auto;
     padding-bottom:2vh;
     position: relative;
-    font-family: 'Josefin Sans', sans-serif;
     position: relative;
     margin:2%;
     padding:3%;
@@ -228,7 +333,6 @@ input[type="range"]::-webkit-slider-thumb{
     font-size: 1vw;
     color: white;
     justify-content: center;
-    font-family: 'Josefin Sans', sans-serif;
     margin-left:55%;
 }
 
@@ -257,7 +361,6 @@ input[type="range"]::-webkit-slider-thumb{
 
 /*Salary ($250/hour)*/
 #salary{
-    font-family: 'Josefin Sans', sans-serif;
     font-size: 1.1vw;
     margin-left: 13%;
 }
@@ -265,23 +368,55 @@ input[type="range"]::-webkit-slider-thumb{
 /*Location (San Francisco, CA)*/
 #location {
     font-size: 0.9vw;
-    font-family: 'Josefin Sans', sans-serif;
     color: rgba(0, 0, 0, 0.575);
     margin-left: 13%;
     margin-top:-8%;
 }
 
+.jobsBanner{
+  display: inline-flex;
+  font-size: 2.5vw;
+  white-space: nowrap ;
+  margin:2%;
+}
+
+#numOfJobs{
+  display: flex;    
+  align-items: center;
+  justify-content: center;
+  width:9vw;
+  height: 3vw;
+  border-radius: 500px;
+  font-size: 2vw;
+  color: rgb(0, 0, 0);
+  margin-left:9%;
+  margin-top:4%;
+  border: 0.12vw solid rgba(0, 0, 0, 0.339);
+}
+
+.sort *{
+  display: inline-flex;
+  font-size: 1.2vw;
+  cursor: pointer;
+  margin-top:19%;
+  margin-left:1px;
+}
+
+#sortByText{
+  color:gray;
+}
+
   #filtersOpen{
     font-size: 2vw;
-    font-family: 'Josefin Sans', sans-serif;
     margin:5%;
     display: inline-flex;
+    width:100%;
     cursor: pointer;
   }
 
   #toggleFiltersCaret{
-    padding-top: 30.3%;
-    padding-left: 25%;
+    padding-top: 2%;
+    padding-left: 2%;
     font-size: 2vw;
   }
 
@@ -295,8 +430,6 @@ input[type="range"]::-webkit-slider-thumb{
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
     margin:5%;
-    font-family: 'Josefin Sans', sans-serif;
-
   }
   
   /* The navigation menu links */

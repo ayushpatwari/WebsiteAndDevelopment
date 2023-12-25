@@ -25,6 +25,13 @@ const x = document.getElementById("toggleBookmark");
           document.getElementById("main").style.marginLeft = "250px";
         }
       }
+
+/*SEARCH BAR*/
+const icon = document.querySelector('.icon');
+const search = document.querySelector('.search');
+icon.onclick = function(){
+  search.classList.toggle('active')
+}
 /*SALARY SLIDER*/
 const rangeInput = document.querySelectorAll(".range-input input"),
 priceInput = document.querySelectorAll(".price-input input"),
@@ -66,10 +73,10 @@ rangeInput.forEach(input =>{
 
         if((maxVal - minVal) < priceGap){
             if(e.target.className === "range-min"){
-                formatCurrency(rangeInput[0].value = maxVal - priceGap)
+                rangeInput[0].value = maxVal - priceGap
                 
             }else{
-                formatCurrency(rangeInput[1].value = minVal + priceGap);
+                rangeInput[1].value = minVal + priceGap;
             }
         }else{
             priceInput[0].value = minVal;
@@ -83,6 +90,9 @@ rangeInput.forEach(input =>{
         console.log(forBackend);
     });
 });
+
+
+
 
 
 
