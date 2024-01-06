@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'userportal.css' %}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <i class="ri-menu-fill notCollapse" id="collapser"></i>
+        <div class="logo">
+            <h3 id="toHide">Virtual Systems</h3>
+        </div>
+        <div class="applications scalediv">
+            <i class="ri-clipboard-fill scaleup"></i>
+            <p class="clickText nocollapse">Applications</p>
+        </div>
+        <div class="calendar scalediv">
+            <i class="ri-calendar-schedule-fill scaleup"></i>
+            <p class="clickText nocollapse">Calendar</p>
+        </div>
+        <div class="joincall scalediv">
+            <i class="ri-phone-fill scaleup"></i>
+            <p class="clickText nocollapse">Calls</p>
+        </div>
+        <div class="backHome scalediv">
+            <i class="ri-arrow-go-back-fill scaleup"></i>
+            <a href="/"><p class="clickText nocollapse">Back</p></a>
+        </div>
+
+        <div class="name__user">
+            <i class="ri-user-3-fill nocollapse"></i>
+            <p class="nocollapse">Hello {name}</p>
+            <i class="ri-more-fill scaleup" id="menuPopup"></i>
+        </div>
+    </div>
+    <div class="normContainer">
+        <div class="applications_container">
+            <div class="first_line">
+                <h3 id="myApps">My Applications</h3>
+                <div class="alarm">
+                    <i class="ri-notification-line"></i>
+                    <div class="logout">
+                        <i class="ri-logout-box-r-line"></i>
+                        <div class="logout_text">
+                            <a href="/login/out"><h4>Logout</h4></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="second_line">
+                <input type="text" class="textField" placeholder="Search">
+                <div class="sort">
+                    <i class="ri-filter-3-fill"></i>
+                    <p>Sort</p>
+                </div>
+                <div class="save">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="application_boxes__container">
+            {% for application in applications %}
+                <div class="application_box">
+                    <div class="app_line1">
+                        <h6 class="company_logo">LG</h6>
+                        <h5 class="company_name">{{application.companyName}}</h5>
+                        <i class="ri-more-2-fill"></i>
+                    </div>
+                    <div class="app_line2">
+                        <p class="position">{{application.position}}</p>
+                    </div>
+
+                    <div class="app_line3">
+                        <section class="grayColored">
+                            <i class="ri-time-line"></i>
+                            <p class="date_since">{{application.timeOfApplication}}</p>
+                        </section>
+                        <span class="{% if application.status == 'Under Review' %} underreview {% else %} {{application.status|lower}} {% endif %}">
+                            <p>{{application.status}}</p>
+                        </span>
+
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <script src="{% static 'userportal.js' %}"></script>
+</body>
+
+</html>
