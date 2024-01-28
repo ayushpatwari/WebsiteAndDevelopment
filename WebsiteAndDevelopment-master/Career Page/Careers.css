@@ -55,7 +55,7 @@ a:hover {
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2%;
+    grid-gap: 20px;
 }
 
 .banner{

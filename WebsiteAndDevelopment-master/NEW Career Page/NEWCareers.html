@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <link href="NEWCareers.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <header>
+    <h1 class="logo">Virtual Systems</h1>
+    <nav>
+      <ul class="nav__links">
+        <li><a href="/Home Page/homepage.html">Home</a></li>
+        <li><a href="/Forms Page/Forms.html">Login</a></li>
+        <li><a href="/Career Page/Careers.html">Careers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="background-container"></div>
+  <div class="careersHeader">
+    <div class="search">
+      <div class="icon"></div>
+      <div class="input">
+        <input type="text" placeholder="Search" id="mySearch">
+      </div>
+      <span class="clearSearch" onclick="document.getElementById('mySearch').value = ''"></span>
+    </div>
+
+
+    <div class="salaryFilter">
+      <!-- <input type="text" name="currency-field" id="currency-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency" placeholder="$1,000,000.00"> -->
+      <div class="price-input">
+        <h4 id="salaryTitle">Salary range</h4>
+        <div class="salary">
+          <h4 class="salaryDoller">$</h4>
+          <input type="number" class="input-min salaryInput" data-type="currency" value="2500">
+        </div>
+        <div class="seperator">-</div>
+        <div class="salary">
+          <h4 class="salaryDoller">$</h4>
+          <input type="number" class="input-max salaryInput" data-type="currency" value="7500">
+        </div>
+      </div>
+
+      <div class="salarySlider">
+        <div class="slider">
+          <div class="progress"></div>
+        </div>
+        <div class="range-input">
+          <input type="range" class="range-min" min="0" max="10000" value="2500">
+          <input type="range" class="range-max" min="0" max="10000" value="7500">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="content">
+    <div class="filters">
+      <div class="filtersHeader">
+        <div class="filtersAndCaret">
+        <h2 id="toggleSidebar">Filters</h2>
+        <svg id="filtersCaret" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+          <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+        </svg>
+      </div>
+        <h5 id="uncheckAll" class="clear">Clear All</h5>
+      </div>
+
+      <div class="sidebar__container">
+        <aside class="sidebar">
+          <div class="allCheckboxes">
+            <div class="workingScheduleHeader filtersHeader">
+              <p>Working schedule</p>
+              <h5 id="uncheckWorkingSchedule" class="clear">Clear</h5>
+            </div>
+            <label class="box working-schedule">
+              <input type="checkbox">
+              Full time
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="box working-schedule">
+              <input type="checkbox">
+              Part time
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="box working-schedule">
+              <input type="checkbox">
+              Internship
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="box working-schedule">
+              <input type="checkbox">
+              Project work
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="box working-schedule">
+              <input type="checkbox">
+              Volunteering
+              <span class="checkmark"></span>
+            </label>
+
+            <div class="employmentTypeHeader filtersHeader">
+              <p>Employment type</p>
+              <h5 id="uncheckEmploymentType" class="clear">Clear</h5>
+            </div>
+
+            <label class="box employment-type">
+              <input type="checkbox">
+              Full day
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="box employment-type">
+              <input type="checkbox">
+              Flexible schedule
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="box employment-type">
+              <input type="checkbox">
+              Shift work
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="box employment-type">
+              <input type="checkbox">
+              Distant work
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="box employment-type">
+              <input type="checkbox">
+              Shift method
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <div class="bannerAndJobs">
+      <div class="careersBanner">
+        <div class="leftCareersBanner">
+          <h1>Recommended jobs</h1>
+          <h3 id="numOfJobs">386</h3>
+        </div>
+        <div class="sortBy">
+          <h5 id="sortByTitle">Sort by:</h5>
+          <h5 id="sortByFilter">Last updated</h5>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sliders2" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M10.5 1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4H1.5a.5.5 0 0 1 0-1H10V1.5a.5.5 0 0 1 .5-.5M12 3.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m-6.5 2A.5.5 0 0 1 6 6v1.5h8.5a.5.5 0 0 1 0 1H6V10a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5M1 8a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 1 8m9.5 2a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V13H1.5a.5.5 0 0 1 0-1H10v-1.5a.5.5 0 0 1 .5-.5m1.5 2.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
+          </svg>
+        </div>
+      </div>
+      <div class="allJobs">
+
+        <div class="jobContainer">
+          <div class="jobColorContainer">
+            <div class="jobContainerHeader">
+              <h5 id="date">20 May, 2023</h5>
+              <svg id="bookmark" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16" onclick="toggleBookmark()">
+                <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z" />
+              </svg>
+            </div>
+            <h3>Amazon</h3>
+            <h2 id="jobTitle">Senior UI/UX Designer</h2>
+            <div class="allTags">
+              <p class="tag">Part time</p>
+              <p class="tag">Senior level</p>
+              <p class="tag">Distant</p>
+              <p class="tag">Project work</p>
+            </div>
+          </div>
+          <div class="jobBottomContainer">
+            <table>
+              <tr>
+                <td id="salary">$250/hr</td>
+              </tr>
+              <tr>
+                <td id="location">San Francisco, CA</td>
+              </tr>
+            </table>
+            <div class="applyNow">Apply Now</div>
+          </div>
+        </div>
+        <div class="jobContainer">
+          <div class="jobColorContainer">
+            <h5 id="date">20 May, 2023</h5>
+            <h3>Amazon</h3>
+            <h2 id="jobTitle">Senior UI/UX Designer</h2>
+            <div class="allTags">
+              <p class="tag">Part time</p>
+              <p class="tag">Senior level</p>
+              <p class="tag">Distant</p>
+              <p class="tag">Project work</p>
+            </div>
+          </div>
+          <div class="jobBottomContainer">
+            <table>
+              <tr>
+                <td id="salary">$250/hr</td>
+              </tr>
+              <tr>
+                <td id="location">San Francisco, CA</td>
+                <td rowspan="2" id="applyNow"> Apply Now</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="jobContainer">
+          <div class="jobColorContainer">
+            <h5 id="date">20 May, 2023</h5>
+            <h3>Amazon</h3>
+            <h2 id="jobTitle">Senior UI/UX Designer</h2>
+            <div class="allTags">
+              <p class="tag">Part time</p>
+              <p class="tag">Senior level</p>
+              <p class="tag">Distant</p>
+              <p class="tag">Project work</p>
+            </div>
+          </div>
+          <div class="jobBottomContainer">
+            <table>
+              <tr>
+                <td id="salary">$250/hr</td>
+              </tr>
+              <tr>
+                <td id="location">San Francisco, CA</td>
+                <td rowspan="2" id="applyNow"> Apply Now</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="jobContainer">
+          <div class="jobColorContainer">
+            <h5 id="date">20 May, 2023</h5>
+            <h3>Amazon</h3>
+            <h2 id="jobTitle">Senior UI/UX Designer</h2>
+            <div class="allTags">
+              <p class="tag">Part time</p>
+              <p class="tag">Senior level</p>
+              <p class="tag">Distant</p>
+              <p class="tag">Project work</p>
+            </div>
+          </div>
+          <div class="jobBottomContainer">
+            <table>
+              <tr>
+                <td id="salary">$250/hr</td>
+              </tr>
+              <tr>
+                <td id="location">San Francisco, CA</td>
+                <td rowspan="2" id="applyNow"> Apply Now</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+      const caret = document.getElementById('filtersCaret');
+      const WIDTH = '200px';
+      let opened = true;
+
+      const button = document.querySelector('#toggleSidebar');
+      const sidebar = document.querySelector('.sidebar__container .sidebar');
+
+      button.addEventListener('click', function() {
+          opened = !opened;
+          sidebar.style.width = opened ? WIDTH : '0px';
+
+          // Use requestAnimationFrame to ensure that the rotation class is applied after layout changes
+          requestAnimationFrame(function() {
+              caret.classList.toggle('rotate-90');
+          });
+      });
+  });
+
+
+    $(document).ready(function() {
+      $('#uncheckWorkingSchedule').click(function() {
+        $('.allCheckboxes .working-schedule input[type="checkbox"]').prop('checked', false);
+      });
+
+      $('#uncheckEmploymentType').click(function() {
+        $('.allCheckboxes .employment-type input[type="checkbox"]').prop('checked', false);
+      });
+      $('#uncheckAll').click(function() {
+        $('.allCheckboxes input[type="checkbox"]').prop('checked', false);
+      });
+    });
+
+  </script>
+  <script src="script.js"></script>
+
+  </body>
+
+</html>
