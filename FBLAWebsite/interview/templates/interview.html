@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stuff</title>
+    <link rel="stylesheet" href="{% static 'interview.css' %}">
+</head>
+<body>
+    <h3>Chats!!!</h3>
+    <form id="form">
+        <input type="text" id="message">
+        <button type="submit" id="submit">Send</button>
+    </form>
+    <h1>Video call</h1>
+    <div id="videos">
+        <video class="video-player" id="user-1" autoplay playsinline></video>
+        <video class="video-player" id="user-2" autoplay playsinline></video>
+    </div>
+    <button id="joinCall">join</button>
+    <button id="verify">verify</button>
+    <div class="chats">
+
+    </div>
+    
+    {{ room_name|json_script:"room-name" }}
+    {{ username|json_script:"username" }}
+    <script type="text/javascript">
+        const roomName = JSON.parse(document.getElementById("room-name").textContent);
+        const username = JSON.parse(document.getElementById("username").textContent);
+    </script>
+    <script src="{% static 'interview.js' %}"></script>
+</body>
+</html>

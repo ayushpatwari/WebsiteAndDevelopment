@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stuff</title>
+    <link rel="stylesheet" href="interview.css">
+</head>
+<body>
+    <div class="left">
+        <div class="info">
+            <div class="information-about-interview">
+                <h1 class="title">Google Interview Round 2</h1>
+                <h3>
+                    Round 2 of your Google interview is exciting! 
+                    Expect a deeper dive into your technical skills through a coding challenge. Show off 
+                    your problem-solving skills and explain your thought process clearly.
+                    Remember, communication and enthusiasm are key! Good luck!</h3>
+            </div>
+            <div class="buttons">
+                <button id="mute" class = "actionButtons"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-camera-video-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2z"/>
+                      </svg>
+                </button>
+                <button id="unmute" class = "actionButtons">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-mic-fill" viewBox="0 0 16 16">
+                        <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0z"/>
+                        <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5"/>
+                      </svg>
+                </button>
+                <button id="leave" class = "actionButtons">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                      </svg>
+                </button>
+            </div>
+        </div>
+        <div id="videos">
+            <video class="video-player" id="user-1" autoplay playsinline></video>
+            <video class="video-player" id="user-2" autoplay playsinline></video>
+        </div>
+    </div>
+    <div class="right">
+        <div class="chat">
+            <h1>Chat</h1>
+            <div class="chats">
+
+            </div>
+            <div class="chatInput">
+                <input id = "messageInput" type = "text" placeholder="Enter a message">
+                <button type = "submit" id = "messageSubmitButton"> > </button>
+            </div>
+        </div>
+        
+    </div>
+    <!-- <h3>Chats!!!</h3>
+    <form id="form">
+        <input type="text" id="message">
+        <button type="submit" id="submit">Send</button>
+    </form>
+    <h1>Video call</h1>
+    <div id="videos">
+        <video class="video-player" id="user-1" autoplay playsinline></video>
+        <video class="video-player" id="user-2" autoplay playsinline></video>
+    </div>
+    <button id="joinCall">join</button>
+    <button id="verify">verify</button>
+    <div class="chats">
+
+    </div>
+    
+    {{ room_name|json_script:"room-name" }}
+    {{ username|json_script:"username" }}
+    <script type="text/javascript">
+        const roomName = JSON.parse(document.getElementById("room-name").textContent);
+        const username = JSON.parse(document.getElementById("username").textContent);
+    </script> -->
+    <!-- <script src="{% static 'interview.js' %}"></script> -->
+</body>
+</html>
