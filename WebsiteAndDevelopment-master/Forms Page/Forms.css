@@ -89,13 +89,13 @@ body{
     
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
-    padding:4px;
+    padding:8px;
     padding-left: 30px;
     padding-right: 30px;
     margin:10px;
     font-size:15px;
     white-space: nowrap ;
-    border-radius: 11px;
+    border-radius: 8px;
     border-bottom-left-radius: 0px;
     z-index: 1;
 }
@@ -127,69 +127,59 @@ table{
     font-size:15px;
 }
 
-p{
+
+.summaryAndOverview{
+  display: flex;
+}
+.summaryAndOverview p{
     font-size:15px;
     line-height: 2;
+    width: 67%;
+    margin-right: 40px;
 }
+
+.overview{
+  background-color: rgba(163, 230, 255, 0.505);
+  border-radius: 10px;
+  padding: 10px;
+  width: 33%;
+  display: flex; /* Set container to flex */
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.allOverviewsContainer {
+  height:100%;
+  display:flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom:20px;
+}
+
+.overviewTopicContainer{
+  display: flex;
+  align-items: center;
+}
+.topic{
+  color: gray;
+}
+.companyTopic{
+  margin-left: auto; /* Push the companyTopic to the right */
+  margin-right: 0;
+}
+.overviewTopicContainer h3 {
+  flex-grow: 1; /* Allow h3 elements to grow and take up remaining space */
+}
+.allOverviewsContainer{
+
+}
+
 
 
 .applyNowButton{
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
-}
-.circle{
-  display: flex;
-  background-size: cover;
-  position: relative;
-   width:150px;
-  height:150px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  backdrop-filter: blur(10px);
-  font-size:large;
-  border-style:dashed;
-  border-radius: 50%;
-  transition: all 1.2s; 
-}
-.circle p{
-  font-size: 14px;
-  color: rgb(244,244,244);
-}
-.circle:hover {
-  transform: scale(1.2);
-  transition: all 1.2s;
-}
-.buttonInCircle{
-  position: absolute;
-  width:200px;
-  height:200px;
-}
-
-.text{
-  position: absolute;
-  width: 200px;
-  height:200px;
-  animation: rotateText 10s linear infinite;
-}
-
-@keyframes rotateText{
-  0%{
-      transform: rotate(360deg);
-  }
-  100%{
-      transform: rotate(0deg);
-  }
-}
-.text span{
-  position: absolute;
-  left:50%;
-  font-size: 1.2em;
-  transform-origin: 0 100px;
-  color: #24252A;
 }
 
 /* The Modal (background) */
@@ -356,45 +346,7 @@ input[type="file"]::file-selector-button:active {
       --d-t: .6s;
       --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
     }
-    &:disabled {
-      --b: var(--disabled);
-      cursor: not-allowed;
-      opacity: .9;
-      &:checked {
-        --b: var(--disabled-inner);
-        --bc: var(--border);
-      }
-      & + label {
-        cursor: not-allowed;
-      }
-    }
-    &:hover {
-      &:not(:checked) {
-        &:not(:disabled) {
-          --bc: var(--border-hover);
-        }
-      }
-    }
-    &:focus {
-      box-shadow: 0 0 0 var(--focus);
-    }
-    &:not(.switch) {
-      width: 21px;
-      &:after {
-        opacity: var(--o, 0);
-      }
-      &:checked {
-        --o: 1;
-      }
-    }
-    & + label {
-      font-size: 14px;
-      line-height: 21px;
-      display: inline-block;
-      vertical-align: top;
-      cursor: pointer;
-      margin-left: 4px;
-    }
+    
   }
   input[type='checkbox'] {
     &:not(.switch) {
@@ -454,5 +406,44 @@ input[type="file"]::file-selector-button:active {
   &:before,
   &:after {
     box-sizing: inherit;
+  }
+}
+
+
+
+
+.button {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: large;
+  --light: #fff;
+  --dark: #414856;
+  --border: #C3C8DE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 0;
+  padding: 0 30px;
+  width: auto;
+  height: 60px;
+  border-radius: 2px;
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--dark);
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 10px 30px rgba(#414856, 0.1);
+  transition: transform .1s linear,
+    color .1s linear,
+    background .15s linear;
+  > span {
+    display: inline-block;
+    position: relative;
+    transition: transform .15s linear;
+  }
+  &.fill {
+    border: 0;
+    color: var(--light);
+    background-size: cover;
   }
 }

@@ -53,21 +53,52 @@
         </table>
       </div>
 
+      <div class="summaryAndOverview">
       <p class="jobSummary">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam reiciendis dicta sunt vel, quisquam ullam sapiente quo similique, exercitationem repudiandae beatae magni recusandae. Laborum consequatur adipisci accusamus soluta esse aperiam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam ut iure error sit, illo repellat reiciendis accusamus exercitationem accusantium tempore reprehenderit aliquam vero, laborum veritatis praesentium! Odio expedita iste voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis officiis dolorum illo quam fuga totam, odio cupiditate, aliquam fugit sed aperiam eligendi nesciunt? Voluptatem eaque illo voluptate rem quibusdam iusto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat similique deserunt quasi consectetur ad, accusantium dolorem adipisci tenetur dolore quibusdam voluptatibus ducimus earum atque quia iure sunt, error iusto aspernatur?</p>
+
+      <div class="overview">
+ 
+        <div class="allOverviewsContainer">
+
+        <div class="overviewTopicContainer">
+        <h3 class="topic">Company: </h3> <h3 class="companyTopic">Amazon</h3>
+      </div>
+
+        <div class="overviewTopicContainer">
+        <h3 class="topic">Job Title:</h3>
+         <h3 class="companyTopic">Senior UI/UX Designer</h3>
+      </div>
+
+        <div class="overviewTopicContainer">
+        <h3 class="topic">Salary:</h3> <h3 class="companyTopic">$250/hr</h3>
+      </div>
+
+        <div class="overviewTopicContainer">
+        <h3 class="topic">Location:</h3> <h3 class="companyTopic">San Francisco, CA</h3>
+      </div>
+
+        <div class="overviewTopicContainer">
+          <h3 class="topic">Date Published:</h3> <h3 class="companyTopic">May 20, 2023</h3>
+      </div>
+
+      </div>
+    </div>
+    </div>
 
       <br>
       <h2>Want to be a part? 👋</h2>
       <br><br>
 
+      
+      
+
       <div class="applyNowButton">
-        <div class="circle gradient" id="myBtn">
-          <p>APPLY NOW!</p>
-          <div class="buttonInCircle">
+        <button class="button fill gradient" id="myBtn">
+          <span>APPLY NOW! 😀</span>
+        </button>
             <div class="text">
-              <p> JOIN  US  AT  VIRTUAL  TODAY! </p>
+              <p></p>
             </div>
-          </div>
-        </div>
     </div>
 
 
@@ -355,70 +386,7 @@
 </div>
 
       
-      <script>
-        window.onload = choosePic;
-
-        var myPix = ["Mesh Gradient Generator.png", "Mesh Gradient Generator (1).png", "Mesh Gradient Generator (2).png", "Mesh Gradient Generator (3).png"];
-        
-        var chosenImage = ""; // Variable to store the chosen image URL
-        
-        function choosePic() {
-            // Choose a random image only once
-            var randomNum = Math.floor(Math.random() * myPix.length);
-            chosenImage = myPix[randomNum];
-        
-            // Apply the chosen image to all elements with class 'gradient'
-            var backgrounds = document.querySelectorAll('.gradient');
-            backgrounds.forEach(function(background) {
-                var imageUrl = "url('" + chosenImage + "')";
-                background.style.backgroundImage = imageUrl;
-            });
-        }
-        
-
-
-
-
-        // Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-
-
-
-
-
-const text = document.querySelector('.text p');
-text.innerHTML = text.innerText.split("").map(
-  (char, i) =>
-  `<span style="transform:rotate(${i*14}deg)">${char}</span>`
-).join("")
-
-      </script>
-      <script src="../assets/vendor/daterangepicker/moment.min.js"></script>
-      <script src="../assets/vendor/daterangepicker/daterangepicker.js"></script>
-  </body>
+      <script src="script.js"></script>
+    </body>
 
 </html>
