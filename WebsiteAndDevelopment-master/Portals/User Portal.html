@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="User Portal.css">
+  <title>Document</title>
+</head>
+
+<body>
+  
+  
+  <script src="{% static 'userportal.js' %}"></script>
+
+
+  
+
+
+    <div class="application_boxes__container">
+
+      <div class="application_box">
+        <div class="app_line1">
+          <h6 class="company_logo">LG</h6>
+          <h5 class="company_name">{{application.companyName}}</h5>
+          
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+              <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+            </svg></button>
+            <div id="myDropdown" class="dropdown-content">
+              <p id="myBtn">View Application</p>
+             
+            </div>
+            <!-- The Modal -->
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Personal Information</h3>
+      <br>
+      <h4>Name:</h4>
+      <br>
+      <div class="flexTextFieldContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+          <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+        </svg>
+        <input type="text" class="textField" placeholder="First name">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+          <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+        </svg>
+        <input type="text" class="textField" placeholder="Last name">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user optional" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+          <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+        </svg>
+        <input type="text" class="textField optional" placeholder="Preferred name">
+      </div>
+      <br>
+      <h4>Contact:</h4>
+      <br>
+      <div class="flexTextFieldContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+          <path d="M3 7l9 6l9 -6" />
+        </svg>
+        <input type="text" class="textField" placeholder="example@example.com">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-mobile" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14z" />
+          <path d="M11 4h2" />
+          <path d="M12 17v.01" />
+        </svg>
+        <input type="text" class="textField" placeholder="123-456-7890">
+      </div>
+      <br>
+      <h4>Adress:</h4>
+      <br>
+      <div class="flexTextFieldContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+          <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+        </svg>
+        <input type="text" class="textField" placeholder="123 Main St, City, Country">
+      </div>
+      <br>
+      <h4>Date of Birth:</h4>
+      <br>
+      <div class="flexTextFieldContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cake" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M3 20h18v-8a3 3 0 0 0 -3 -3h-12a3 3 0 0 0 -3 3v8z" />
+          <path d="M3 14.803c.312 .135 .654 .204 1 .197a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1c.35 .007 .692 -.062 1 -.197" />
+          <path d="M12 4l1.465 1.638a2 2 0 1 1 -3.015 .099l1.55 -1.737z" />
+        </svg>
+        <input type="date" class="textField">
+      </div>
+
+
+      <br><br>
+      <h3>Employment History</h3>
+      <br>
+      <h4>Previous Experience:</h4>
+      <br>
+      <div class="flexTextFieldContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building-skyscraper" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M3 21l18 0" />
+          <path d="M5 21v-14l8 -4v18" />
+          <path d="M19 21v-10l-6 -4" />
+          <path d="M9 9l0 .01" />
+          <path d="M9 12l0 .01" />
+          <path d="M9 15l0 .01" />
+          <path d="M9 18l0 .01" />
+        </svg>
+        <input type="text" class="textField" placeholder="Last Company, Other, Other">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-briefcase-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9z" />
+          <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
+        </svg>
+        <input type="text" class="textField" placeholder="Last Job Title, Other, Other">
+      </div>
+      <br>
+      <div class="flexTextFieldContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hammer" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M11.414 10l-7.383 7.418a2.091 2.091 0 0 0 0 2.967a2.11 2.11 0 0 0 2.976 0l7.407 -7.385" />
+          <path d="M18.121 15.293l2.586 -2.586a1 1 0 0 0 0 -1.414l-7.586 -7.586a1 1 0 0 0 -1.414 0l-2.586 2.586a1 1 0 0 0 0 1.414l7.586 7.586a1 1 0 0 0 1.414 0z" />
+        </svg>
+        <input type="text" class="textField" placeholder="Past Job Responsibilities">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-door-exit" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M13 12v.01" />
+          <path d="M3 21h18" />
+          <path d="M5 21v-16a2 2 0 0 1 2 -2h7.5m2.5 10.5v7.5" />
+          <path d="M14 7h7m-3 -3l3 3l-3 3" />
+        </svg>
+        <input type="text" class="textField" placeholder="Reason for Leaving">
+      </div>
+      <br>
+      <h4>Last Date of Employment</h4>
+      <br>
+      <div class="flexTextFieldContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-briefcase-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9z" />
+          <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
+        </svg>
+        <input type="date" class="textField" id="lastDOE">
+      </div>
+      <br>
+      <h4>Supervisor: (Should we contact?)
+        <input type="checkbox" id="myCheckbox">
+      </h4>
+      <br>
+      <div class="flexTextFieldContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-star" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+          <path d="M6 21v-2a4 4 0 0 1 4 -4h.5" />
+          <path d="M17.8 20.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z" />
+        </svg>
+        <input type="text" class="textField" placeholder="Previous Supervisor's Name">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-star" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+          <path d="M6 21v-2a4 4 0 0 1 4 -4h.5" />
+          <path d="M17.8 20.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z" />
+        </svg>
+        <input type="text" class="textField" placeholder="Previous Supervisor's Title">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-star" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+          <path d="M6 21v-2a4 4 0 0 1 4 -4h.5" />
+          <path d="M17.8 20.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z" />
+        </svg>
+        <input type="text" class="textField" placeholder="Previous Supervisor's Contact">
+      </div>
+
+
+      <br><br>
+      <h3>Education</h3>
+      <br>
+      <h4>Previous Education:</h4>
+      <br>
+      <div class="flexTextFieldContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-school" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
+          <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
+        </svg>
+
+        <div class="textField">
+          <select name="levelsOfEdu" id="levelsOfEdu">
+            <option value="eduQuestion">Highest Level of Education?:</option>
+            <option value="highSchool">High School Diploma</option>
+            <option value="associate">Associate's Degree</option>
+            <option value="bachelor">Bachelor's Degree</option>
+            <option value="master">Master's Degree</option>
+            <option value="doctorate">Doctorate (Ph.D., Ed.D., etc.)</option>
+          </select>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-school" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
+          <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
+        </svg>
+        <input type="text" class="textField" placeholder="School/University's Name">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-books" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M5 4m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z" />
+          <path d="M9 4m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z" />
+          <path d="M5 8h4" />
+          <path d="M9 16h4" />
+          <path d="M13.803 4.56l2.184 -.53c.562 -.135 1.133 .19 1.282 .732l3.695 13.418a1.02 1.02 0 0 1 -.634 1.219l-.133 .041l-2.184 .53c-.562 .135 -1.133 -.19 -1.282 -.732l-3.695 -13.418a1.02 1.02 0 0 1 .634 -1.219l.133 -.041z" />
+          <path d="M14 9l4 -1" />
+          <path d="M16 16l3.923 -.98" />
+        </svg>
+        <input type="text" class="textField" placeholder="Major/Field of Study">
+      </div>
+      <br>
+      <h4>Graduation Date:</h4>
+      <br>
+      <div class="flexTextFieldContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-school" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
+          <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
+        </svg>
+        <input type="date" class="textField" id="gradDate">
+      </div>
+      <br>
+      <h4>Languages:</h4>
+      <br>
+      <div class="flexTextFieldContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M4 5h7" />
+          <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+          <path d="M5 9c0 2.144 2.952 3.908 6.7 4" />
+          <path d="M12 20l4 -9l4 9" />
+          <path d="M19.1 18h-6.2" />
+        </svg>
+        <input type="text" class="textField" placeholder="Languages">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language optional" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M4 5h7" />
+          <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+          <path d="M5 9c0 2.144 2.952 3.908 6.7 4" />
+          <path d="M12 20l4 -9l4 9" />
+          <path d="M19.1 18h-6.2" />
+        </svg>
+        <input type="text" class="textField optional" placeholder="Add More Languages">
+      </div>
+
+      <br><br>
+      <h3>Skills/Qualifications</h3>
+      <br>
+
+
+      <br><br>
+      <h3>Additional Information</h3>
+      <br>
+      <h4>Citizenship:</h4>
+      <br>
+      <div class="flexTextFieldContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-certificate" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M15 15m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+          <path d="M13 17.5v4.5l2 -1.5l2 1.5v-4.5" />
+          <path d="M10 19h-5a2 2 0 0 1 -2 -2v-10c0 -1.1 .9 -2 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -1 1.73" />
+          <path d="M6 9l12 0" />
+          <path d="M6 12l3 0" />
+          <path d="M6 15l2 0" />
+        </svg>
+
+        <div class="textField">
+          <select name="" id="levelsOfEdu">
+            <option value="citizenQuestion">Form of Citizenship?:</option>
+            <option value="citizen">Citizen</option>
+            <option value="greenCard">Green Card</option>
+            <option value="greenCard">Work Visa</option>
+          </select>
+        </div>
+      </div>
+
+      <br><br>
+      <h3>Resume</h3>
+      <br>
+      <h4>Upload Resume:</h4>
+      <br>
+      <div class="flexTextFieldContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-cv" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+          <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+          <path d="M11 12.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" />
+          <path d="M13 11l1.5 6l1.5 -6" />
+        </svg>
+
+        <form action="/action_page.php" class="textField">
+          <input type="file" id="myFile" name="filename">
+        </form>
+
+        
+      </div>
+
+      <div class="responseButtons">
+        <div class="acceptButton">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/>
+          </svg>
+          <button type="button">Accept</button>
+        </div>
+    
+        <div class="rejectButton">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+          </svg>
+          <button type="button">Reject</button>
+      </div>
+    
+      <div class="waitingButton">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hourglass-split" viewBox="0 0 16 16">
+          <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/>
+        </svg>
+        <button type="button">Waiting</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+          </div>
+
+        </div>
+        <div class="app_line2">
+          <p class="position">{{application.position}}</p>
+        </div>
+
+        <div class="app_line3">
+          <section class="grayColored">
+            <i class="ri-time-line"></i>
+            <p class="date_since">{{application.timeOfApplication}}</p>
+          </section>
+
+
+          <span
+            class="{% if application.status == 'Under Review' %} underreview {% else %} {{application.status|lower}} {% endif %}">
+            <p>{{application.status}}</p>
+          </span>
+
+        </div>
+      </div>
+      <div class="application_box">
+        <div class="app_line1">
+          <h6 class="company_logo">LG</h6>
+          <h5 class="company_name">{{application.companyName}}</h5>
+          <i class="ri-more-2-fill"></i>
+        </div>
+        <div class="app_line2">
+          <p class="position">{{application.position}}</p>
+        </div>
+
+        <div class="app_line3">
+          <section class="grayColored">
+            <i class="ri-time-line"></i>
+            <p class="date_since">{{application.timeOfApplication}}</p>
+          </section>
+          <span
+            class="{% if application.status == 'Under Review' %} underreview {% else %} {{application.status|lower}} {% endif %}">
+            <p>{{application.status}}</p>
+          </span>
+
+        </div>
+      </div>
+      <div class="application_box">
+        <div class="app_line1">
+          <h6 class="company_logo">LG</h6>
+          <h5 class="company_name">{{application.companyName}}</h5>
+          <i class="ri-more-2-fill"></i>
+        </div>
+        <div class="app_line2">
+          <p class="position">{{application.position}}</p>
+        </div>
+
+        <div class="app_line3">
+          <section class="grayColored">
+            <i class="ri-time-line"></i>
+            <p class="date_since">{{application.timeOfApplication}}</p>
+          </section>
+          <span
+            class="{% if application.status == 'Under Review' %} underreview {% else %} {{application.status|lower}} {% endif %}">
+            <p>{{application.status}}</p>
+          </span>
+        </div>
+      </div>
+  </div>
+<script src="User_Portal.js"></script>
+</body>
+
+</html>

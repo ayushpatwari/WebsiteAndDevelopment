@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="Admin Forms.css">
+  <title>Document</title>
+</head>
+
+<body>
+  
+  
+  <script src="{% static 'userportal.js' %}"></script>
+
+
+  
+
+
+
+       
+          
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+              <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+            </svg></button>
+            <div id="myDropdown" class="dropdown-content">
+              <p id="myBtn">View Application</p>
+             
+            </div>
+            <!-- The Modal -->
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Personal Information</h3>
+      <br>
+      <h4>Job Info:</h4>
+      <br>
+      <div class="flexTextFieldContainer">
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-briefcase-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9z" />
+            <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
+          </svg>
+        <input type="text" class="textField" placeholder="Job Title">
+        
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-coin" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+            <path d="M14.8 9a2 2 0 0 0 -1.8 -1h-2a2 2 0 1 0 0 4h2a2 2 0 1 1 0 4h-2a2 2 0 0 1 -1.8 -1" />
+            <path d="M12 7v10" />
+          </svg>
+        <input type="text" class="textField" placeholder="Hourly Wage">
+
+
+        
+
+
+      </div>
+
+
+      <br>
+      <h4>Location:</h4>
+      <br>
+
+      <div class="flexTextFieldContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+            <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+          </svg>
+        <input type="text" class="textField" placeholder="City">
+
+
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+            <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+          </svg>
+        <input type="text" class="textField" placeholder="State">
+
+        
+      </div>
+
+      <br>
+      <h4>Job Description:</h4>
+      <br>
+
+      <div class="flexTextFieldContainer">
+        <textarea class="textField textArea" placeholder="Job Description"></textarea>
+        
+      </div>
+
+
+
+      <div class="allCheckboxes">
+        <br>
+        <div class="workingScheduleHeader filtersHeader">
+          <p>Working schedule</p>
+        </div>
+        <br>
+        <label class="box working-schedule">
+          <input type="checkbox" value="Full Time">
+          Full time
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="box working-schedule">
+          <input type="checkbox" value="Part time">
+          Part time
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="box working-schedule">
+          <input type="checkbox" value="Internship">
+          Internship
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="box working-schedule">
+          <input type="checkbox" value="Project work">
+          Project work
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="box working-schedule">
+          <input type="checkbox" value="Volunteering">
+          Volunteering
+          <span class="checkmark"></span>
+        </label>
+
+        <br>
+        <br>
+
+        <div class="employmentTypeHeader filtersHeader">
+          <p>Employment type</p>
+        </div>
+        <br>
+
+        <label class="box employment-type">
+          <input type="checkbox" value="Full day">
+          Full day
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="box employment-type">
+          <input type="checkbox" value="Flexible Schedule day">
+          Flexible schedule
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="box employment-type">
+          <input type="checkbox" value="Shift work">
+          Shift work
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="box employment-type">
+          <input type="checkbox" value="Distant work">
+          Distant work
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="box employment-type">
+          <input type="checkbox" value="Shift method">
+          Shift method
+          <span class="checkmark"></span>
+        </label>
+      </div>
+
+
+
+      <div class="createButton">
+        <button class="button fill gradient" id="myBtn">
+          <span>CREATE! 🥳</span>
+        </button>
+            <div class="text">
+              <p></p>
+            </div>
+    </div>
+  </div>
+
+
+  </div>
+<script src="Admin Forms.js"></script>
+</body>
+
+</html>
