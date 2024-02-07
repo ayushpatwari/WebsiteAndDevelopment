@@ -148,7 +148,7 @@ function choosePic() {
 
 let currentFilters = [];
 
-var checkboxes = document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+var checkboxes = document.querySelectorAll('.allCheckboxes input[type="checkbox"]').forEach((checkbox) => {
   checkbox.addEventListener("change", function() {
     let query = this.value; // 'this' refers to the checkbox that triggered the event
     if (this.checked) {
@@ -246,8 +246,43 @@ dropdowns.forEach(dropdown => {
     if(e.clientX <size.left || e.clientX > size.right || e.clientY <size.bottom
       ) {
         select.classList.remove('select-clicked');
-        caret.classList.remove('caret-rotate');
         menu.classList.remove('menu-open');
       }
   });
 });
+
+function toggleDarkMode() {
+  var mode = document.body;
+  mode.classList.toggle("dark-mode");
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  const caret = document.getElementById('filtersCaret');
+  const WIDTH = '200px';
+  let opened = true;
+
+  const button = document.querySelector('#toggleSidebar');
+  const sidebar = document.querySelector('.sidebar__container .sidebar');
+
+  button.addEventListener('click', function() {
+    opened = !opened;
+    sidebar.style.width = opened ? WIDTH : '0px';
+
+    // Use requestAnimationFrame to ensure that the rotation class is applied after layout changes
+    requestAnimationFrame(function() {
+      caret.classList.toggle('rotate-180');
+      var h5Element = document.getElementById('uncheckAll');
+      if (h5Element) {
+        h5Element.removeAttribute('id');
+      } else {
+        var h5Element = document.querySelector('h5');
+        if (h5Element) {
+          h5Element.setAttribute('id', 'uncheckAll');
+        }
+      }
+    });
+
+  });
+}); 
+

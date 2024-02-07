@@ -1,5 +1,6 @@
 const text = document.querySelector('.text p');
+
 text.innerHTML = text.innerText.split("").map(
-    (char, i) =>
-    '<span style="transform:rotate(${i*5}deg)">${char}</span>'
-)
+        (char, i) =>
+        `<span style="transform:rotate(${i*14}deg)">${char}</span>`
+      ).join("");

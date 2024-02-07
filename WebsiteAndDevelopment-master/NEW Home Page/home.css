@@ -29,7 +29,7 @@ header *{
     font-family: 'Josefin Sans', sans-serif;
     color: white;
     cursor: pointer;
-    font-size: 25p;
+    font-size: 25px;
 
 }
 
@@ -81,12 +81,20 @@ a:hover {
 .quirky-quote{
     display:flex;
     flex-direction: row;
+    justify-content: space-between;
     padding: 40px;
-    height: 355px;
-    background: linear-gradient(90deg, #edc0bf 0, #c4caef 58%);
+    padding-left: 80px;
+    padding-right: 80px;
+
+    height: 500px;
+    background-image: url(Mesh\ Gradient\ Generator\ \(1\).png);
+    background-size: cover;
 }
 
-
+.quirky-quote img{
+    width: auto;
+    height: 110%; 
+}
 .keyword {
     color: #0088a9;
 }
@@ -199,16 +207,15 @@ a:hover {
     flex-direction: column;
     padding-top: 50px;
     padding-bottom: 50px;
-    background: linear-gradient(90deg, #edc0bf 0, #c4caef 58%);
     justify-content: center;
     align-items: center;
 }                                                                                                                                           
 
 .review_area{
-    background: rgba(255, 255, 255, .7);
+    background: linear-gradient(90deg, #bfe8ed 0, #c4caef 58%);
     backdrop-filter: blur(10px);
     width: 75%;
-    padding: 10px;
+    padding: 20px;
     border-radius: 25px;
 }
 .reviews_container{ 
@@ -216,6 +223,7 @@ a:hover {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
 }
 
 .reviews_container p {
@@ -305,11 +313,11 @@ a:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(90deg, #edc0bf 0, #c4caef 58%);
+    /* background: linear-gradient(90deg, #edc0bf 0, #c4caef 58%); */
     padding: 50px;
 }
 .featuresArea{
-    background: rgba(255, 255, 255, .7);
+    background: linear-gradient(90deg, #edc0bf 0, #c4caef 58%);
     backdrop-filter: blur(10px);
     border-radius: 25px;
     padding: 25px;
@@ -365,12 +373,16 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+   
   }
 .partnerLogos img {
     max-width:15%;
     height:auto;
     margin: 10px;
     margin-right:50px;
+    background: rgb(244,244,244);
+    padding: 10px;
+    border-radius: 10px;
 }
 
 
@@ -378,7 +390,8 @@ a:hover {
 .footer{
     display: flex;
     color: white;
-
+    background-image: url(Mesh\ Gradient\ Generator\ \(1\).png);
+    background-size: cover;
 }
 
 
@@ -473,8 +486,7 @@ a:hover {
     margin-right: 50px;  
 }
 #footerCopyright{
-    margin-top:30px;
-    margin-left:50px;
+    margin-top: 20px;
 }
 
 
@@ -493,7 +505,6 @@ a:hover {
     justify-content: center;
     position: relative;
     z-index: 1;
-    
 }
 .rightCurve *{
     font-family: 'Josefin Slab', serif;
