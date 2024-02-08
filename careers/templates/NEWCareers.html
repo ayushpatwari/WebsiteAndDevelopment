@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    {% load static %}
+    <link href="{% static 'NEWCareers.css' %}" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <header>
+    <a href="/">
+      <h1 class="logo">Virtual Systems</h1>
+  </a>
+    <nav>
+      <ul class="nav__links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/careers/">Careers</a></li>
+        <li><a href="/dashboard/">Dashboard</a></li>
+        <li><a href="/benefits">Benefits</a></li>
+      </ul>
+    </nav>
+    <a class="Login" href="/login/"><button id="nav_button">Login</button></a>
+  </header>
+  <div class="careersHeader">
+    <div class="search">
+      <div class="icon"></div>
+      <div class="input">
+        <input type="text" placeholder="Search Job Name" id="mySearch">
+      </div>
+      <span class="clearSearch" onclick="document.getElementById('mySearch').value = ''"></span>
+    </div>
+
+    <div class="salaryFilter">
+      <div class="price-input">
+        <h4 id="salaryTitle">Wage Per Hour Range</h4>
+        <div class="field">
+          <h4 class="salaryDoller">$</h4>
+          <input type="number" class="input-min" value="2500">
+        </div>
+        <div class="separator">-</div>
+        <div class="field">
+          <h4 class="salaryDoller">$</h4>
+          <input type="number" class="input-max" value="7500">
+        </div>
+      </div>
+      <div class="slider">
+        <div class="progress"></div>
+      </div>
+      <div class="range-input">
+        <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+        <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+
+
+  <div class="content">
+    <div class="filters">
+      <div class="filtersHeader">
+        <div class="filtersAndCaret">
+          <h2 id="toggleSidebar">Filters</h2>
+          <svg id="filtersCaret" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+          </svg>
+        </div>
+        <h5 id="" class="clear">Clear All</h5>
+      </div>
+
+      <div class="sidebar__container">
+        <aside class="sidebar">
+          <div class="allCheckboxes">
+            <br>
+            <div class="workingScheduleHeader filtersHeader">
+              <p>Working schedule</p>
+              <h5 id="uncheckWorkingSchedule" class="clear">Clear</h5>
+            </div>
+            <br>
+            <label class="box working-schedule">
+              <input type="checkbox" value="Full Time">
+              Full time
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="box working-schedule">
+              <input type="checkbox" value="Part Time">
+              Part Time
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="box working-schedule">
+              <input type="checkbox" value="Internship">
+              Internship
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="box working-schedule">
+              <input type="checkbox" value="Project work">
+              Project work
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="box working-schedule">
+              <input type="checkbox" value="Volunteering">
+              Volunteering
+              <span class="checkmark"></span>
+            </label>
+
+            <div class="employmentTypeHeader filtersHeader">
+              <p>Employment type</p>
+              <h5 id="uncheckEmploymentType" class="clear">Clear</h5>
+            </div>
+            <br>
+
+            <label class="box employment-type">
+              <input type="checkbox" value="Full day">
+              Full day
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="box employment-type">
+              <input type="checkbox" value="Flexible Schedule day">
+              Flexible schedule
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="box employment-type">
+              <input type="checkbox" value="Shift work">
+              Shift work
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="box employment-type">
+              <input type="checkbox" value="Distant work">
+              Distant work
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="box employment-type">
+              <input type="checkbox" value="Shift method">
+              Shift method
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <div class="bannerAndJobs">
+      <div class="careersBanner">
+        <div class="leftCareersBanner">
+          <h1>Recommended jobs</h1>
+          <h3 id="numOfJobs">{{count}}</h3>
+        </div>
+
+
+
+     
+      </div>
+      <div class="allJobs">
+        {% for job in jobs %}
+        <div class="jobContainer">
+          <div class="jobColorContainer first" id="jobColorContainer" style="background-image: url({{image_url}});">
+            <div class="jobContainerHeader">
+              <h5 id="date">March 2024</h5>
+            </div>
+            <h3>{{job.jobCompany}}</h3>
+            <div id="jobTitle">{{job.jobTitle}}</div>
+            <div class="allTags">
+              {% for tag in job.tags.all %}
+              <p class="tag">{{tag.name}}</p>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="jobBottomContainer">
+            <table>
+              <tr>
+                <td id="salary">${{job.hourlyWage}}</td>
+              </tr>
+              <tr>
+                <td id="location">{{job.city}}, {{job.state}}</td>
+              </tr>
+            </table>
+            <div class="applyNow" onclick="redirectToPage({{ job.id }})">Apply Now</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      const caret = document.getElementById('filtersCaret');
+      const WIDTH = '200px';
+      let opened = true;
+
+      const button = document.querySelector('#toggleSidebar');
+      const sidebar = document.querySelector('.sidebar__container .sidebar');
+
+      button.addEventListener('click', function() {
+        opened = !opened;
+        sidebar.style.width = opened ? WIDTH : '0px';
+
+        // Use requestAnimationFrame to ensure that the rotation class is applied after layout changes
+        requestAnimationFrame(function() {
+          caret.classList.toggle('rotate-180');
+          var h5Element = document.getElementById('uncheckAll');
+          if (h5Element) {
+            h5Element.removeAttribute('id');
+          } else {
+            var h5Element = document.querySelector('h5');
+            if (h5Element) {
+              h5Element.setAttribute('id', 'uncheckAll');
+            }
+          }
+        });
+
+      });
+    });
+
+    function redirectToPage(id) {
+      var currentUrl = window.location.href;
+      var redirectUrl = currentUrl + id;
+      window.location.href = redirectUrl;
+    }
+
+  </script>
+
+  <script src="{% static 'script.js' %}"></script>
+
+  </body>
+
+</html>

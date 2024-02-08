@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    {% load static %}
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+  </head>
+  <body>
+    <div class="container">
+      <div class="design">
+        <div class="pill-1 rotate-45"></div>
+        <div class="pill-2 rotate-45"></div>
+        <div class="pill-3 rotate-45"></div>
+      </div>
+      <form class="actualForm"  method="post">
+        <h3 class="hidden SignUpOnly">Sign Up Today </h3>
+        <h3 id="signIn">Welcome Back</h3>
+        {% csrf_token %}
+        <div class="text-input hidden SignUpOnly" id="emailInput">
+            <i class="ri-mail-fill"></i>
+            <input type="email" placeholder="Email" id="email" name="email"/>
+        </div>
+        <div class="text-input" id="userInput">
+          <i class="ri-user-fill"></i>
+          <input type="text" placeholder="Username" id="username" name="username"/>
+        </div>
+        <div class="text-input" id="passwordInput">
+          <i class="ri-lock-fill"></i>
+          <input type="password" placeholder="Password" id="password" name="password"/>
+        </div>
+        <div class="text-input hidden SignUpOnly" id="confirmInput">
+            <i class="ri-lock-fill"></i>
+            <input type="password" placeholder="Confirm Password?" name="confirm" id="confirmPass"/>
+          </div>
+        <button class="LOGIN" type="submit">Login</button>
+        <div class="create">
+          <a id="toClick">Create an account </a>
+          <i class="ri-arrow-right-fill" id="Arrow"></i>
+        </div>
+      </form>
+    </div>
+    <script src="{% static 'login.js' %}" defer></script>
+    <script src="{% static 'confetti.js' %}" defer></script>
+  </body>
+</html>
